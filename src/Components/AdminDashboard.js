@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import Data from './Admin.Data';
 import Report from './Admin.Report';
 import UsersPermissions from './Admin.UsersPermissions';
+import { TbDatabase } from "react-icons/tb";
+import { TbReportAnalytics } from "react-icons/tb";
+import { TbUserEdit } from "react-icons/tb";
+
 
 const AdminDashboard = () => {
   const [selectedTab, setSelectedTab] = useState('Data');
@@ -39,19 +43,19 @@ const Sidebar = ({ onTabChange, selectedTab }) => (
         className={selectedTab === 'Data' ? 'active tab' : 'tab'}
         onClick={() => onTabChange('Data')}
       >
-        Data
+        <TbDatabase /> Data
       </li>
       <li
         className={selectedTab === 'Report' ? 'active tab' : 'tab'}
         onClick={() => onTabChange('Report')}
       >
-        Report
+        <TbReportAnalytics /> Report
       </li>
       <li
         className={selectedTab === 'UsersPermissions' ? 'active tab' : 'tab'}
         onClick={() => onTabChange('UsersPermissions')}
       >
-        Users & Permissions
+        <TbUserEdit /> Users & Permissions
       </li>
     </ul>
   </nav>

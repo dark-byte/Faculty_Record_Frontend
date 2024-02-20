@@ -1,9 +1,11 @@
 import React from 'react'
+import Navbar from './Navbar'
 
 const Data = () => {
   return (
     <div>
-      data
+      
+      <Navbar title="Data"/>
     </div>
   )
 }
