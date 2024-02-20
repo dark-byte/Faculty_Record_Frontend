@@ -1,38 +1,209 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
 .App {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #0077cc; /* Pastel blue color */
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: center; /* Center items horizontally */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: calc(50% - 100px); /* Adjust width to fit two columns with margin */
+  min-width: 400px;
+  margin: 10px; /* Add margin between form and image containers */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  margin-left: 2rem;
+  margin: 10px; /* Add margin between form and image containers */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-id{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+
+label {
+  display: inline-block;
+  width: 30%;
+  color: #333333; /* Dark gray color */
+  font-size: 16px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc; /* Light gray border */
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.buttons-container {
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 70px;
+}
+
+.in-button {
+  background-color: #0077cc; /* Pastel blue color */
+  color: #ffffff; /* White color */
+}
+
+.in-button:hover{
+  background-color: #0061a7;
+}
+
+.out-button {
+  background: none; /* Red color */
+  border: none;
+  outline: 2px solid #0077cc;
+  outline-offset: -2px;
+}
+
+img {
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: calc(50% - 80px);
+  min-width: 660px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.faculty-info h2 {
+  color: #0077cc; /* Pastel blue color */
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.faculty-info p {
+  margin-bottom: 8px;
+  font-size: 16px;
 }
+
+.faculty-info strong {
+  font-weight: bold;
+}
+
+.f-info{
+  margin-bottom: 20px;
+}
+
+.f-info td, th{
+  text-align: start;
+  padding: 5px 15px;
+}
+
+
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f2f2f2; /* Light background */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  background-color: #f8f8f8; /* Slightly darker background */
+  border-right: 1px solid #ddd;
+}
+
+.sidebar h1{
+  margin: 2rem;
+  margin-top: 3rem;
+}
+
+ul{
+  padding: 0;
+  width: 100%;
+}
+
+li{
+  list-style: none;
+}
+
+.tab {
+  padding: 16px 24px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tab.active {
+  background-color: #0077cc; /* Primary color */
+  color: #fff; /* White text */
+}
+
+.tab:hover {
+  background-color: #e0e0e0; /* Light hover color */
+}
+
+.tab.active:hover{
+  background-color: #025fa2;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 20px;
+}
+
