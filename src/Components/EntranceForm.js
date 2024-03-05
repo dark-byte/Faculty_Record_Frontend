@@ -1,15 +1,15 @@
 import '../App.css';
 import React, { useState } from 'react';
-import pic from '../Assets/test.jpg'
+// import pic from '../Assets/test.jpg'
 
 function EntranceForm() {
   const [facultyId, setFacultyId] = useState('');
-  const [image, setImage] = useState(null);
+  // const [image, setImage] = useState(null);
   const [facultyInfo, setFacultyInfo] = useState(null); // State to store faculty information
 
   const handleInButtonClick = () => {
     // Logic for displaying image when IN button is clicked
-    setImage(pic);
+    // setImage(pic);
     // Update faculty information
     setFacultyInfo({
       name: 'John Doe',
@@ -21,14 +21,14 @@ function EntranceForm() {
     // Reset form input and image after 5 seconds
     setTimeout(() => {
       setFacultyId('');
-      setImage(null);
+      // setImage(null);
       setFacultyInfo(null); // Reset faculty information
     }, 5000);
   };
 
   const handleOutButtonClick = () => {
     // Logic for displaying image when OUT button is clicked
-    setImage(pic);
+    // setImage(pic);
     // Update faculty information
     setFacultyInfo({
       ...facultyInfo, // Preserve existing information
@@ -38,7 +38,7 @@ function EntranceForm() {
     // Reset form input and image after 5 seconds
     setTimeout(() => {
       setFacultyId('');
-      setImage(null);
+      // setImage(null);
       setFacultyInfo(null); // Reset faculty information
     }, 5000);
   };
@@ -62,9 +62,9 @@ function EntranceForm() {
             <button className="out-button" onClick={handleOutButtonClick}>Out</button>
           </div>
         </div>
-        <div className="image-container">
+        {/* <div className="image-container">
           {image && <img src={image} alt="Entrance Image" />}
-        </div>
+        </div> */}
       </div>
         {facultyInfo && ( // Render faculty information if available
         <div className="faculty-info">

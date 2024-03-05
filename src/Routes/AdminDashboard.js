@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Data from './Admin.Data';
-import Report from './Admin.Report';
-import UsersPermissions from './Admin.UsersPermissions';
+import Data from '../Components/Admin.Data';
+import Report from '../Components/Admin.Report';
+import UsersPermissions from '../Components/Admin.UsersPermissions';
 import { TbDatabase } from "react-icons/tb";
 import { TbReportAnalytics } from "react-icons/tb";
 import { TbUserEdit } from "react-icons/tb";
